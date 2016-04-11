@@ -1,33 +1,6 @@
-/*****************************************/
-/************* COLOR SCHEMES *************/
-/*****************************************/
 @import url(http://fonts.googleapis.com/css?family=Roboto:400,100,900italic,700italic,900,700,500italic,500,400italic,300italic,300,100italic&amp;subset=latin,latin-ext);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans+Condensed:700&amp;subset=latin,latin-ext);
-body {
-    /************************************/
-    /************* BROWNISH *************/
-    /************************************/
-    /*************************************/
-    /************* DARK GREY *************/
-    /*************************************/
-    /**************************************/
-    /************* LIGHT GREY *************/
-    /**************************************/
-    /********************************/
-    /************* CYAN *************/
-    /********************************/
-    /*******************************/
-    /************* RED *************/
-    /*******************************/
-    /*********************************/
-    /************* GREEN *************/
-    /*********************************/
-    /**********************************/
-    /************* ORANGE *************/
-    /**********************************/
-    /************************************/
-    /************* AMETHYST *************/
-    /************************************/ }
+body {}
 body.brownish-scheme {
     color: #7d7264;
     /* navbar */
@@ -52,9 +25,6 @@ body.brownish-scheme .navbar-default {
     /*sidebar*/ }
 body.brownish-scheme .navbar-default .navbar-header {
     background-color: #d6d2cc; }
-body.brownish-scheme .navbar-default .navbar-brand {
-    color: #7d7264;
-    background: url(../images/minoral-logo.png) no-repeat 0 23px; }
 body.brownish-scheme .navbar-default .navbar-brand:hover {
     color: #61584d; }
 body.brownish-scheme .navbar-default .sidebar-collapse a i {

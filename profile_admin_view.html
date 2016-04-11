@@ -11,13 +11,57 @@
     <link href="/assets/vendor/selectize/css/selectize.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/vendor/selectize/css/selectize.default.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/vendor/bs-rating/bootstrap-rating.css" type="text/css" rel="stylesheet"/>
+    <link href="/assets/vendor/owl.carousel/assets/owl.carousel.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/css/base.css" type="text/css" rel="stylesheet"/>
     <link href="/assets/css/main.css" type="text/css" rel="stylesheet"/>
 </head>
-<body>
+<body class="admin-view">
 <div class="navbar navbar-default navbar-fixed-top" role="navigation">
 
+    <div class="admin-navbar">
+        <div class="navbar-header col-md-2">
+            <a class="navbar-brand" href="/profile_admin_view.html">
+                Admin Area
+            </a>
+        </div>
+        <!-- Branding end -->
 
+
+        <!-- .nav-collapse -->
+        <div class="navbar-collapse">
+            <!-- Content collapsing at 768px to sidebar -->
+            <div class="collapsing-content">
+
+
+                <!-- Search -->
+                <div class="search">
+                    <input id="search-users" type="text" placeholder=" search users you need ...">
+                </div>
+                <!-- Search end -->
+
+
+                <!-- User Controls -->
+                <div class="user-controls">
+                    <ul>
+
+
+                        <li class="dropdown messages">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Admin<strong>User</strong>
+                                <i class="fa fa-angle-down"></i>
+                            </a>
+                            <div class="profile-photo">
+                                <img src="/assets/img/profile_photo.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- User Controls end -->
+
+
+            </div>
+            <!-- /Content collapsing at 768px to sidebar -->
+        </div>
+    </div>
     <!-- Branding -->
     <div class="navbar-header col-md-2">
         <a class="navbar-brand" href="index.html">
@@ -200,7 +244,9 @@
                             <li><h1></h1></li>
                             <li><a href="/profile.html">My Profile <i class="fa fa-home"></i></a></li>
                             <li><a href="#">My Balance : 10$ </a></li>
-                            <li><a href="#">Books Borrowed [count] : <span class="badge badge-red animated bounceIn" id="user-new-messages">3</span> <i class="fa fa-angle-right"></i></a></li>
+                            <li><a href="#">Books Borrowed [count] : <span class="badge badge-red animated bounceIn"
+                                                                           id="user-new-messages">3</span> <i
+                                    class="fa fa-angle-right"></i></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -256,13 +302,105 @@
     <div class="loading-container">
         <img src="/assets/img/299.gif" alt="">
     </div>
-    <div class="container">
-        <h3 class="group-name">Top Rated Books</h3>
-    </div>
-    <div class="main-container top-rated">
+    <div class="cover-photo-container">
         <div class="container">
-            <div class="row" row-id="1">
-                <div class="col-md-2 col-sm-4 col-xs-6">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="main-profile-photo-container">
+                        <img src="/assets/img/profile_photo.png" class="img-responsive"/>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <h2>Arash Khajelou</h2>
+                    <p>The are only 10 types of people in the world , those who understand binary and those who
+                        don't</p>
+                    <hr/>
+                    <h5 class="balance-container">
+                        <button class="btn btn-cyan btn-xs setting-btn" onclick="jQuery(this).parent().find('.balance-setting').slideDown()"><i class="fa fa-cog"></i> balance setting</button>
+                        balance : 10$
+                        <div class="balance-setting">
+                            <button class="btn btn-xs btn-danger close-btn" onclick="jQuery(this).parent().slideUp()"><i class="fa fa-times"></i></button>
+                            <h6>raise your account balance</h6>
+                            <hr/>
+                            <div class="form-group-sm">
+                                <input class="form-control input-sm" name="amount" placeholder="Balance amount [$]" type="number"/>
+                            </div>
+                            <button class="btn btn-success btn-block margin-top-10">submit for balance raise</button>
+                        </div>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <h3 class="group-name">Books waiting for admin acceptance</h3>
+    </div>
+    <div class="main-container books-waiting">
+        <div class="container">
+            <div class="row books-carousel" row-id="0">
+                <div class="col-md-12">
+                    <div class="book-grid ">
+                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
+                        <div class="book-caption">
+                            <h5>Test Book</h5>
+                            <hr/>
+                            <div class="">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                        <button class="btn btn-success btn-xs submit-book btn-block">submit this book</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row book-description" id="description-0">
+                <button class="close-book-description">
+                    <i class="fa fa-times"></i>
+                </button>
+                <h1>Test Book</h1>
+                <hr/>
+                <div class="col-md-6">
+                    <h5>publish year : 2000</h5>
+                    <h5>user rating :
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </h5>
+                    <h5>genre : science, poets, ...</h5>
+                    <h5>Universal ID : 3df3ss3300</h5>
+                    <h5>property : -</h5>
+                </div>
+                <div class="col-md-6">
+                    <h5>about book </h5>
+                    <hr/>
+                    <p>
+                        Lorem ipsum dolor sit amet, sit vitae invenire consulatu ex, eos iudico putent habemus cu. Vel
+                        recteque elaboraret appellantur ea, sed ad nibh elitr. Dicunt aperiri nonumes vis at, salutandi
+                        voluptaria quo no. Habeo brute aliquid no nam, ius id exerci singulis splendide. At vix novum
+                        referrentur, iusto nonumy eu eum, has sensibus postulant aliquando in.
+                    </p>
+                </div>
+                <div class="col-md-offset-10 col-md-2 col-sm-6 col-sm-offset-6 col-xs-12">
+                    <button class="btn btn-block btn-xs btn-cyan" type="button" data-toggle="modal"
+                            data-target="#login-modal">get this book
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="group-name">Borrowed Books</h3>
+    </div>
+    <div class="main-container books-borrowed">
+        <div class="container">
+            <div class="row books-carousel" row-id="1">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -278,7 +416,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -294,55 +432,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -394,8 +484,16 @@
                     </button>
                 </div>
             </div>
-            <div class="row" row-id="2">
-                <div class="col-md-2 col-sm-4 col-xs-6">
+        </div>
+    </div>
+
+    <div class="container">
+        <h3 class="group-name">History</h3>
+    </div>
+    <div class="main-container books-history">
+        <div class="container">
+            <div class="row books-carousel" row-id="2">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -411,7 +509,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -427,7 +525,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -443,7 +541,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -459,7 +557,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -475,7 +573,39 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
+                <div class="col-md-12">
+                    <div class="book-grid ">
+                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
+                        <div class="book-caption">
+                            <h5>Test Book</h5>
+                            <hr/>
+                            <div class="">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="book-grid ">
+                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
+                        <div class="book-caption">
+                            <h5>Test Book</h5>
+                            <hr/>
+                            <div class="">
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star"></i>
+                                <i class="fa fa-star-o"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12">
                     <div class="book-grid ">
                         <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
                         <div class="book-caption">
@@ -493,552 +623,6 @@
                 </div>
             </div>
             <div class="row book-description" id="description-2">
-                <button class="close-book-description">
-                    <i class="fa fa-times"></i>
-                </button>
-                <h1>Test Book</h1>
-                <hr/>
-                <div class="col-md-6">
-                    <h5>publish year : 2000</h5>
-                    <h5>user rating :
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </h5>
-                    <h5>genre : science, poets, ...</h5>
-                    <h5>Universal ID : 3df3ss3300</h5>
-                    <h5>property : -</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5>about book </h5>
-                    <hr/>
-                    <p>
-                        Lorem ipsum dolor sit amet, sit vitae invenire consulatu ex, eos iudico putent habemus cu. Vel
-                        recteque elaboraret appellantur ea, sed ad nibh elitr. Dicunt aperiri nonumes vis at, salutandi
-                        voluptaria quo no. Habeo brute aliquid no nam, ius id exerci singulis splendide. At vix novum
-                        referrentur, iusto nonumy eu eum, has sensibus postulant aliquando in.
-                    </p>
-                </div>
-                <div class="col-md-offset-10 col-md-2 col-sm-6 col-sm-offset-6 col-xs-12">
-                    <button class="btn btn-block btn-xs btn-cyan" type="button" data-toggle="modal"
-                            data-target="#login-modal">get this book
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <h3 class="group-name">Writer's choice</h3>
-    </div>
-    <div class="main-container writer-choice">
-        <div class="container">
-            <div class="row" row-id="7">
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row book-description" id="description-7">
-                <button class="close-book-description">
-                    <i class="fa fa-times"></i>
-                </button>
-                <h1>Test Book</h1>
-                <hr/>
-                <div class="col-md-6">
-                    <h5>publish year : 2000</h5>
-                    <h5>user rating :
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </h5>
-                    <h5>genre : science, poets, ...</h5>
-                    <h5>Universal ID : 3df3ss3300</h5>
-                    <h5>property : -</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5>about book </h5>
-                    <hr/>
-                    <p>
-                        Lorem ipsum dolor sit amet, sit vitae invenire consulatu ex, eos iudico putent habemus cu. Vel
-                        recteque elaboraret appellantur ea, sed ad nibh elitr. Dicunt aperiri nonumes vis at, salutandi
-                        voluptaria quo no. Habeo brute aliquid no nam, ius id exerci singulis splendide. At vix novum
-                        referrentur, iusto nonumy eu eum, has sensibus postulant aliquando in.
-                    </p>
-                </div>
-                <div class="col-md-offset-10 col-md-2 col-sm-6 col-sm-offset-6 col-xs-12">
-                    <button class="btn btn-block btn-xs btn-cyan" type="button" data-toggle="modal"
-                            data-target="#login-modal">get this book
-                    </button>
-                </div>
-            </div>
-            <div class="row" row-id="8">
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row book-description" id="description-8">
-                <button class="close-book-description">
-                    <i class="fa fa-times"></i>
-                </button>
-                <h1>Test Book</h1>
-                <hr/>
-                <div class="col-md-6">
-                    <h5>publish year : 2000</h5>
-                    <h5>user rating :
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </h5>
-                    <h5>genre : science, poets, ...</h5>
-                    <h5>Universal ID : 3df3ss3300</h5>
-                    <h5>property : -</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5>about book </h5>
-                    <hr/>
-                    <p>
-                        Lorem ipsum dolor sit amet, sit vitae invenire consulatu ex, eos iudico putent habemus cu. Vel
-                        recteque elaboraret appellantur ea, sed ad nibh elitr. Dicunt aperiri nonumes vis at, salutandi
-                        voluptaria quo no. Habeo brute aliquid no nam, ius id exerci singulis splendide. At vix novum
-                        referrentur, iusto nonumy eu eum, has sensibus postulant aliquando in.
-                    </p>
-                </div>
-                <div class="col-md-offset-10 col-md-2 col-sm-6 col-sm-offset-6 col-xs-12">
-                    <button class="btn btn-block btn-xs btn-cyan" type="button" data-toggle="modal"
-                            data-target="#login-modal">get this book
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <h3 class="group-name">New Published Books</h3>
-    </div>
-    <div class="main-container new">
-        <div class="container">
-            <div class="row" row-id="5">
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row book-description" id="description-5">
-                <button class="close-book-description">
-                    <i class="fa fa-times"></i>
-                </button>
-                <h1>Test Book</h1>
-                <hr/>
-                <div class="col-md-6">
-                    <h5>publish year : 2000</h5>
-                    <h5>user rating :
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
-                    </h5>
-                    <h5>genre : science, poets, ...</h5>
-                    <h5>Universal ID : 3df3ss3300</h5>
-                    <h5>property : -</h5>
-                </div>
-                <div class="col-md-6">
-                    <h5>about book </h5>
-                    <hr/>
-                    <p>
-                        Lorem ipsum dolor sit amet, sit vitae invenire consulatu ex, eos iudico putent habemus cu. Vel
-                        recteque elaboraret appellantur ea, sed ad nibh elitr. Dicunt aperiri nonumes vis at, salutandi
-                        voluptaria quo no. Habeo brute aliquid no nam, ius id exerci singulis splendide. At vix novum
-                        referrentur, iusto nonumy eu eum, has sensibus postulant aliquando in.
-                    </p>
-                </div>
-                <div class="col-md-offset-10 col-md-2 col-sm-6 col-sm-offset-6 col-xs-12">
-                    <button class="btn btn-block btn-xs btn-cyan" type="button" data-toggle="modal"
-                            data-target="#login-modal">get this book
-                    </button>
-                </div>
-            </div>
-            <div class="row" row-id="6">
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 col-xs-6">
-                    <div class="book-grid ">
-                        <img src="/assets/img/book.jpeg" alt="" class="img-responsive">
-                        <div class="book-caption">
-                            <h5>Test Book</h5>
-                            <hr/>
-                            <div class="">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star-o"></i>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row book-description" id="description-6">
                 <button class="close-book-description">
                     <i class="fa fa-times"></i>
                 </button>
@@ -1388,6 +972,7 @@
 <script src="/assets/vendor/bs-slider/bootstrap-slider.min.js"></script>
 <script src="/assets/vendor/selectize/js/standalone/selectize.min.js"></script>
 <script src="/assets/vendor/bs-rating/bootstrap-rating.min.js"></script>
+<script src="/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
 <script>
     jQuery(document).ready(function () {
         jQuery('#search-input').on('focus', function (e) {
@@ -1463,6 +1048,28 @@
 
         jQuery('.book-description .close-book-description').on('click', function () {
             closeBookDescription(jQuery(this).parent().attr('id').split('-')[1]);
+        });
+
+        jQuery('.main-container .container .row.books-carousel').owlCarousel({
+            loop: true,
+
+            margin: 10,
+            responsiveClass: true,
+            responsive: {
+                0: {
+                    items: 1,
+                    nav: true
+                },
+                600: {
+                    items: 4,
+                    nav: false
+                },
+                1000: {
+                    items: 6,
+                    nav: false,
+                    loop: false
+                }
+            }
         });
     });
 
